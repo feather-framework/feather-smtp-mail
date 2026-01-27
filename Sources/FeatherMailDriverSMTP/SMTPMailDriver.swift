@@ -4,7 +4,6 @@
 //
 //  Created by gerp83 on 2026. 01. 17.
 //
-    
 
 import Foundation
 import Logging
@@ -61,12 +60,14 @@ public struct SMTPMailDriver: MailClient, Sendable {
     public func send(_ email: Mail) async throws(MailError) {
         do {
             try await validate(email)
-        } catch {
+        }
+        catch {
             throw .validation(error)
         }
         do {
             try await client.send(email)
-        } catch {
+        }
+        catch {
             throw mapSMTPError(error)
         }
     }
@@ -86,7 +87,7 @@ public struct SMTPMailDriver: MailClient, Sendable {
     public func validate(_ mail: Mail) async throws(MailValidationError) {
         try await validator.validate(mail)
     }
-    
+
     private func mapSMTPError(_ error: Error) -> MailError {
         return .unknown(error)
     }
