@@ -5,11 +5,6 @@
 //  Created by gerp83 on 2026. 01. 17.
 //
 
-#if canImport(FoundationEssentials)
-import FoundationEssentials
-#else
-import Foundation
-#endif
 import Logging
 import FeatherMail
 import NIOSMTP

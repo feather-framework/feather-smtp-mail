@@ -7,11 +7,6 @@
 
 import NIO
 import Logging
-#if canImport(FoundationEssentials)
-import FoundationEssentials
-#else
-import Foundation
-#endif
 import Testing
 import NIOSMTP
 @testable import FeatherMail
