@@ -103,7 +103,7 @@ struct FeatherSMTPMailTests {
         }
         catch {
             if case let .validation(validationError) = error,
-                validationError == .invalidSubject
+                validationError == .invalidSender
             {
                 #expect(true)
             }
