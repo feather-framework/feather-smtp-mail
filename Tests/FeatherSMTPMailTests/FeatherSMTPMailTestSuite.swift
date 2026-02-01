@@ -1,5 +1,5 @@
 //
-//  FeatherSMTPMailSuite.swift
+//  FeatherSMTPMailTestSuite.swift
 //  feather-smtp-mail
 //
 //  Created by Tibor Bodecs on 2023. 01. 16..
@@ -13,7 +13,7 @@ import FeatherMail
 @testable import FeatherSMTPMail
 
 @Suite
-struct FeatherSMTPMailSuite {
+struct FeatherSMTPMailTestSuite {
 
     // MARK: - Environment configuration
 
