@@ -139,7 +139,7 @@ struct FeatherSMTPMailTestSuite {
 
                 do {
                     try await client.send(mail)
-                    #expect(Bool(false))
+                    Issue.record("Expected send to fail.")
                 }
                 catch {
                     if case let .validation(validationError) = error
@@ -149,13 +149,13 @@ struct FeatherSMTPMailTestSuite {
                         #expect(true)
                     }
                     else {
-                        #expect(Bool(false))
+                        Issue.record("Unexpected error: \(error)")
                     }
                 }
             }
         }
         catch {
-            #expect(Bool(false))
+            Issue.record("Unexpected error: \(error)")
         }
     }
 
@@ -172,20 +172,20 @@ struct FeatherSMTPMailTestSuite {
 
                 do {
                     try await client.send(mail)
-                    #expect(Bool(false))
+                    Issue.record("Expected send to fail.")
                 }
                 catch {
                     if case .unknown = error as? MailError {
                         #expect(true)
                     }
                     else {
-                        #expect(Bool(false))
+                        Issue.record("Unexpected error: \(error)")
                     }
                 }
             }
         }
         catch {
-            #expect(Bool(false))
+            Issue.record("Unexpected error: \(error)")
         }
     }
 
@@ -202,20 +202,20 @@ struct FeatherSMTPMailTestSuite {
 
                 do {
                     try await client.send(mail)
-                    #expect(Bool(false))
+                    Issue.record("Expected send to fail.")
                 }
                 catch {
                     if case .unknown = error as? MailError {
                         #expect(true)
                     }
                     else {
-                        #expect(Bool(false))
+                        Issue.record("Unexpected error: \(error)")
                     }
                 }
             }
         }
         catch {
-            #expect(Bool(false))
+            Issue.record("Unexpected error: \(error)")
         }
     }
 
@@ -235,20 +235,20 @@ struct FeatherSMTPMailTestSuite {
 
                 do {
                     try await client.send(mail)
-                    #expect(Bool(false))
+                    Issue.record("Expected send to fail.")
                 }
                 catch {
                     if case .custom = error as? MailError {
                         #expect(true)
                     }
                     else {
-                        #expect(Bool(false))
+                        Issue.record("Unexpected error: \(error)")
                     }
                 }
             }
         }
         catch {
-            #expect(Bool(false))
+            Issue.record("Unexpected error: \(error)")
         }
     }
 
@@ -268,20 +268,20 @@ struct FeatherSMTPMailTestSuite {
 
                 do {
                     try await client.send(mail)
-                    #expect(Bool(false))
+                    Issue.record("Expected send to fail.")
                 }
                 catch {
                     if case .custom = error as? MailError {
                         #expect(true)
                     }
                     else {
-                        #expect(Bool(false))
+                        Issue.record("Unexpected error: \(error)")
                     }
                 }
             }
         }
         catch {
-            #expect(Bool(false))
+            Issue.record("Unexpected error: \(error)")
         }
     }
 
