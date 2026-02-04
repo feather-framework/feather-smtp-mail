@@ -18,11 +18,11 @@ SMTP-backed mail client for Feather Mail using SwiftNIO.
 
 - Swift 6.1+
 - Platforms:
-  - macOS 13+
-  - iOS 16+
-  - tvOS 16+
-  - watchOS 9+
-  - visionOS 1+
+  - macOS 15+
+  - iOS 18+
+  - tvOS 18+
+  - watchOS 11+
+  - visionOS 2+
 
 ## Installation
 
